@@ -39,27 +39,32 @@ Uint32 couleur;
 
 int main (int argc , char ** argv)
 {
-initSDL(800,600,"FOURMI DE LANGTON");
-effacerEcran();
+unsigned char Tt;
+        initSDL(800,600,"FOURMI DE LANGTON");
+        effacerEcran();
 
+
+fourmi(100,100,0);  
+
+/*FlecheDroite();*/
+Tt=touche();
+printf("touche : %x \n",Tt);
+
+fourmi(100,100,1);
+actualiser();
+Tt=touche();
+printf("touche : %x \n",Tt);
 
 fourmi(100,100,0);  
 actualiser();
 /*FlecheDroite();*/
-attendreTouche();
+Tt=touche();
+printf("touche : %x \n",Tt);
 
 fourmi(100,100,1);
 actualiser();
-attendreTouche();
-
-fourmi(100,100,0);  
-actualiser();
-/*FlecheDroite();*/
-attendreTouche();
-
-fourmi(100,100,1);
-actualiser();
-attendreTouche();
+Tt=touche();
+printf("touche : %x \n",Tt);
 
 return(EXIT_SUCCESS);
 }

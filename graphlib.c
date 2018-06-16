@@ -206,15 +206,25 @@ void attendreTouche(void)
   while (event.type != SDL_QUIT && event.type != SDL_KEYDOWN);
 }
 
-void FlecheDroite(void)
+int touche(void)
 {
   SDL_Event event;
 
   do
     SDL_WaitEvent(&event);
-  while (event.type != SDL_MOUSEBUTTONDOWN);
+  
+  while ((event.type == SDL_KEYDOWN));
 
+return (event.key.keysym.sym);
 }
+
+
+
+
+
+ 
+
+
 
 
 

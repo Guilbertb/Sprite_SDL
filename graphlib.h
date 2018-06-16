@@ -29,7 +29,10 @@ void initCouleurs(void);
 
 /* suspend l'éxécution jusqu'a l'appuie d'une touche ou l'appuie sur la croix pour fermer le programme */
 void attendreTouche(void);
-void FlecheDroite(void);
+int touche(void);
+
+
+
 /* actualise l'affichage */
 void actualiser(void);
 
